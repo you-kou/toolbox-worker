@@ -35,6 +35,7 @@ INSERT INTO "ToolCategorys" VALUES ('D', '邮箱');
 INSERT INTO "ToolCategorys" VALUES ('E', '服务器');
 INSERT INTO "ToolCategorys" VALUES ('F', 'SMS');
 INSERT INTO "ToolCategorys" VALUES ('G', '魔法上网');
+INSERT INTO "ToolCategorys" VALUES ('H', 'Windows');
 
 -- ----------------------------
 -- Table structure for ToolSubcategorys
@@ -63,6 +64,7 @@ INSERT INTO "ToolSubcategorys" VALUES ('E', 'd', 'DNS服务器');
 INSERT INTO "ToolSubcategorys" VALUES ('F', 'a', '默认');
 INSERT INTO "ToolSubcategorys" VALUES ('G', 'a', '流量购买');
 INSERT INTO "ToolSubcategorys" VALUES ('G', 'b', '出墙必看');
+INSERT INTO "ToolSubcategorys" VALUES ('H', 'a', '装机必备');
 
 -- ----------------------------
 -- Table structure for ToolOverviews
@@ -97,6 +99,7 @@ INSERT INTO "ToolOverviews" VALUES ('B005', 'B', 'a', '迷你工具箱', 'https:
 
 INSERT INTO "ToolOverviews" VALUES ('Ca01', 'C', 'a', 'cobalt', 'https://r2.lazyers.tools/logo/cobalt.png', 'Cobalt可以让你保存你喜欢的东西，而不需要广告、跟踪、付费墙或其他无用的东西。只需粘贴链接，你就可以嗨起来了！', 'https://cobalt.tools/');
 INSERT INTO "ToolOverviews" VALUES ('Ca02', 'C', 'a', 'Gihosoft TubeGet', 'https://www.gihosoft.com/wp-includes/images/w-logo-blue-white-bg.png', 'Gihosoft TubeGet是一款免费的YouTube视频下载软件。Gihosoft TubeGet可以下载包括YouTube在内的1万多个视频网站，还可以批量下载视频，同步下载字幕文件，支持转换各种流行格式。同时Gihosoft TubeGet还可以直接将下载的视频转换为MP3。新增手机管理功能，将视频传输到Android，IOS 等移动设备。', 'https://www.gihosoft.com/free-youtube-downloader.html');
+INSERT INTO "ToolOverviews" VALUES ('Ca03', 'C', 'a', '音乐魔石', 'https://yym4.com/img/favicon.png', '音乐魔石官网提供全网无损音乐、Mp3歌曲免费下载、MP3免费下载、WAV免费下载、音乐免费下载、mp3歌曲免费下载、mp3下载、WAV歌曲免费下载、音乐免费下载、网盘音乐下载、网络音乐排行、网络热门歌曲、非主流音乐、经典老歌、劲舞团歌曲、搞笑歌曲、儿童歌曲、网络歌曲等，收录了网上最新歌曲和流行音乐、网络歌曲、好听的歌、非主流音乐、经典老歌、搞笑歌曲、儿童歌曲、英文歌曲等,为广大音乐爱好者提供音乐交流及资源分享平台。', 'https://yym4.com/');
 
 INSERT INTO "ToolOverviews" VALUES ('Cb01', 'C', 'b', 'APP影院', 'https://cdn.wyteam.net/webapps/maccms/template/blueghost/img/favicon.ico', '提供最新最快的影视资讯和在线播放-免费电影-全网最全视频库-全网最全免费影院-免费影视-免费电视剧-免费影院', 'https://www.appmovie.link/');
 
@@ -134,5 +137,7 @@ INSERT INTO "ToolOverviews" VALUES ('Gb05', 'G', 'b', 'Telegram', 'https://r2.la
 INSERT INTO "ToolOverviews" VALUES ('Gb06', 'G', 'b', 'Spotify', 'https://r2.lazyers.tools/logo/Spotify.png', 'Spotify 有大量的音乐内容，不仅免费而且曲库众多，音质有保障，甚至国内的小众音乐都很全。它为所有主要平台提供应用程序，包括 iOS 、 Android 和您首选的 Web 浏览器。', 'https://open.spotify.com/');
 INSERT INTO "ToolOverviews" VALUES ('Gb07', 'G', 'b', 'YouTube', 'https://r2.lazyers.tools/logo/YouTube.png', '国人称之为油管，里面海量的内容可能让你眼花缭乱，坐拥 10 亿用户，类似国内的 B 站，有大量的免费电影可供选择。', 'https://www.youtube.com/');
 INSERT INTO "ToolOverviews" VALUES ('Gb08', 'G', 'b', 'Netflix', 'https://r2.lazyers.tools/logo/Netflix.ico', '国人称之为网飞或奈飞，是世界最大的会员制流媒体公司，提供了所有流媒体中最“高质量”的电视节目和电影，无论是内容生产还是用户体验都是一级棒。', 'https://www.netflix.com/');
+
+INSERT INTO "ToolOverviews" VALUES ('Ha01', 'H', 'a', 'Potplayer', 'https://t1.daumcdn.net/potplayer/main/img/favicon.ico', 'PotPlayer 可以说是当今 Windows 平台上功能最强大的多媒体播放器（之一？），无广告，不流氓，界面简洁，纯粹为播放而生！', 'https://potplayer.daum.net/?lang=zh_CN');
 
 PRAGMA foreign_keys = true;

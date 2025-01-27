@@ -1,21 +1,22 @@
 /**
- * Welcome to Cloudflare Workers! This is your first worker.
- *
- * - Run `npm run dev` in your terminal to start a development server
- * - Open a browser tab at http://localhost:8787/ to see your worker in action
- * - Run `npm run deploy` to publish your worker
- *
- * Learn more at https://developers.cloudflare.com/workers/
+ * toolbox worker
  */
 
-import handleToolCategorysRequest from './tool-categorys';
-import handleToolSubcategorysRequest from './tool-subcategorys';
-import handleToolOverviewsRequest from './tool-overviews';
+import handleHotSearchRequest from './hot-search';
+import handleToolCategorysRequest from './tool-category';
+import handleToolSubcategorysRequest from './tool-subcategory';
+import handleToolOverviewsRequest from './tool-overview';
 
 export default {
 	async fetch(request, env, ctx) {
-		const { method } = request;
 		const { pathname } = new URL(request.url);
+
+		/**
+		 * 各大网站热搜
+		 */
+		if (pathname === "/hot-searchs") {
+			return await handleHotSearchRequest(request, env);
+		}
 
 		/**
 		 * 工具主分类接口
