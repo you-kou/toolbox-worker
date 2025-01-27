@@ -8,7 +8,6 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
-import { commonHeaders } from './util';
 import handleToolCategorysRequest from './tool-categorys';
 import handleToolSubcategorysRequest from './tool-subcategorys';
 import handleToolOverviewsRequest from './tool-overviews';
