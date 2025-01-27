@@ -18,14 +18,6 @@ export default {
 		const { method } = request;
 		const { pathname } = new URL(request.url);
 
-		if (method === "OPTIONS") {
-			return new Response(null, {
-				headers: {
-					...commonHeaders(request)
-				},
-			});
-		}
-
 		/**
 		 * 工具主分类接口
 		 */

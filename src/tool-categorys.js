@@ -1,5 +1,3 @@
-import { commonHeaders } from './util';
-
 /**
  * 工具主分类接口
  */
@@ -14,7 +12,7 @@ export default async (request, env) => {
 
 		return new Response(JSON.stringify(results), {
 			headers: {
-				...commonHeaders(request)
+				'Content-Type': 'application/json'
 			},
 		});
 	}
