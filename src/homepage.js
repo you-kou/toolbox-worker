@@ -27,8 +27,15 @@ const getTools = async (env) => {
 
 const getToolRecommendations = async (env) => {
 	const { results } = await env.DB.prepare(
-		"SELECT ToolId " +
-		"FROM ToolRecommendations " +
+		"SELECT t3.CategoryName, t4.SubcategoryName, t2.* " +
+		"FROM ToolRecommendations t1 " +
+		"JOIN ToolOverviews t2 " +
+		"ON t1.ToolId = t2.ToolId " +
+		"JOIN ToolCategorys t3 " +
+		"ON t2.CategoryId = t3.CategoryId " +
+		"JOIN ToolSubcategorys t4 " +
+		"ON t2.CategoryId = t4.CategoryId " +
+		"AND t2.SubcategoryId = t4.SubcategoryId " +
 		"ORDER BY CreateTime DESC " +
 		"LIMIT 3",
 	)
