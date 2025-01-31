@@ -1,7 +1,7 @@
 /**
  * 工具概述接口
  */
-export default async (request, env) => {
+export const handleToolOverviewsRequest = async (request, env) => {
 	const { method } = request;
 
 	if (method === "GET") {

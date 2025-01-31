@@ -1,7 +1,7 @@
 /**
  * 工具主分类接口
  */
-export default async (request, env) => {
+export const handleToolCategorysRequest = async (request, env) => {
 	const { method } = request;
 
 	if (method === "GET") {
