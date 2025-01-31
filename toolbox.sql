@@ -92,7 +92,7 @@ INSERT INTO "ToolCategorys" VALUES ('C', '音视频');
 INSERT INTO "ToolSubcategorys" VALUES ('C', 'a', '下载');
 INSERT INTO "ToolSubcategorys" VALUES ('C', 'b', '在线播放');
 
-INSERT INTO "ToolOverviews" VALUES ('Ca01', 'C', 'a', 'cobalt', 'https://r2.lazyers.tools/logo/cobalt.png', 'Cobalt可以让你保存你喜欢的东西，而不需要广告、跟踪、付费墙或其他无用的东西。只需粘贴链接，你就可以嗨起来了！', 'https://cobalt.tools/', '', 0);
+INSERT INTO "ToolOverviews" VALUES ('Ca01', 'C', 'a', 'cobalt', 'https://r2.lazyers.tools/logo/cobalt.png', 'Cobalt可以让你保存你喜欢的东西，而不需要广告、跟踪、付费墙或其他无用的东西。只需粘贴链接，你就可以嗨起来了！', 'https://cobalt.tools/', '', 1);
 INSERT INTO "ToolOverviews" VALUES ('Ca02', 'C', 'a', 'TubeGet', 'https://www.gihosoft.com/wp-includes/images/w-logo-blue-white-bg.png', 'Gihosoft TubeGet是一款免费的YouTube视频下载软件。Gihosoft TubeGet可以下载包括YouTube在内的1万多个视频网站，还可以批量下载视频，同步下载字幕文件，支持转换各种流行格式。同时Gihosoft TubeGet还可以直接将下载的视频转换为MP3。新增手机管理功能，将视频传输到Android，IOS 等移动设备。', 'https://www.gihosoft.com/free-youtube-downloader.html', '视频下载；部分免费', 3);
 INSERT INTO "ToolOverviews" VALUES ('Ca03', 'C', 'a', '音乐魔石', 'https://yym4.com/img/favicon.png', '音乐魔石官网提供全网无损音乐、Mp3歌曲免费下载、MP3免费下载、WAV免费下载、音乐免费下载、mp3歌曲免费下载、mp3下载、WAV歌曲免费下载、音乐免费下载、网盘音乐下载、网络音乐排行、网络热门歌曲、非主流音乐、经典老歌、劲舞团歌曲、搞笑歌曲、儿童歌曲、网络歌曲等，收录了网上最新歌曲和流行音乐、网络歌曲、好听的歌、非主流音乐、经典老歌、搞笑歌曲、儿童歌曲、英文歌曲等,为广大音乐爱好者提供音乐交流及资源分享平台。', 'https://yym4.com/', '免费；网盘下载', 0);
 

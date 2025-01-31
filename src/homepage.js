@@ -11,17 +11,35 @@ export const handleHomepageRequest = async (env) => {
 }
 
 const getTools = async (env) => {
-	const { results } = await env.DB.prepare(
-		"SELECT t1.CategoryName, t2.SubcategoryName, t3.* " +
-		"FROM ToolCategorys t1 " +
-		"JOIN ToolSubcategorys t2 " +
-		"ON t1.CategoryId = t2.CategoryId " +
-		"JOIN ToolOverviews t3 " +
-		"ON t2.CategoryId = t3.CategoryId " +
-		"AND t2.SubcategoryId = t3.SubcategoryId " +
-		"WHERE t2.SubcategoryId = 'a'",
-	)
-		.all();
+	const sql =
+		`SELECT
+			t_category.CategoryId,
+			t_category.CategoryName,
+			t_category.SubcategoryId,
+			t_category.SubcategoryName,
+			ToolOverviews.ToolId,
+			ToolOverviews.ToolName,
+			ToolOverviews.ToolLogo,
+			ToolOverviews.FunctionSummary,
+			ToolOverviews.OfficialWebsite,
+			ToolOverviews.Tags,
+			ToolOverviews.ScreenshotNumber
+		FROM
+			(
+			SELECT
+				t1.CategoryId,
+				t1.CategoryName,
+				t2.SubcategoryId,
+				t2.SubcategoryName
+			FROM
+				ToolCategorys t1
+				JOIN ToolSubcategorys t2 ON t1.CategoryId = t2.CategoryId
+			) t_category
+			LEFT JOIN ToolOverviews ON t_category.CategoryId = ToolOverviews.CategoryId
+			AND t_category.SubcategoryId = ToolOverviews.SubcategoryId
+			AND ToolOverviews.SubcategoryId = 'a'`;
+
+	const { results } = await env.DB.prepare(sql).all();
 	return results;
 }
 
