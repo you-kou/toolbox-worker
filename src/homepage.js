@@ -11,7 +11,7 @@ export const handleHomepageRequest = async (env) => {
 		"AND t2.SubcategoryId = t3.SubcategoryId " +
 		"WHERE t2.SubcategoryId = 'a'",
 	)
-		.run();
+		.run().results;
 
 	return Response.json(tools);
 
