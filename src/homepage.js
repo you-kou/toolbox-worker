@@ -6,7 +6,7 @@ export const handleHomepageRequest = async (env) => {
 		"FROM ToolCategorys t1 " +
 		"JOIN ToolSubcategorys t2 " +
 		"ON t1.CategoryId = t2.CategoryId " +
-		"JOIN ToolOverviews t2 " +
+		"JOIN ToolOverviews t3 " +
 		"ON t2.CategoryId = t3.CategoryId " +
 		"AND t2.SubcategoryId = t3.SubcategoryId " +
 		"WHERE t2.SubcategoryId = 'a'",
