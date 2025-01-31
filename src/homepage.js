@@ -11,18 +11,20 @@ export const handleHomepageRequest = async (env) => {
 		"AND t2.SubcategoryId = t3.SubcategoryId " +
 		"WHERE t2.SubcategoryId = 'a'",
 	)
-		.all().results;
+		.run();
 
-	const recommendations = await getToolRecommendations(env);
+	return Response.json(tools);
 
-	const result = {
-		tools,
-		recommendations
-	}
-
-	return new Response(JSON.stringify(result), {
-		headers: {
-			'Content-Type': 'application/json'
-		},
-	});
+	// const recommendations = await getToolRecommendations(env);
+	//
+	// const result = {
+	// 	tools,
+	// 	recommendations
+	// }
+	//
+	// return new Response(JSON.stringify(result), {
+	// 	headers: {
+	// 		'Content-Type': 'application/json'
+	// 	},
+	// });
 }
