@@ -1,6 +1,16 @@
-import { getToolRecommendations } from './tool-recommendation';
-
 export const handleHomepageRequest = async (env) => {
+	const tools = await getTools(env);
+	const recommendations = await getToolRecommendations(env);
+
+	const result = {
+		tools,
+		recommendations
+	}
+
+	return Response.json(result);
+}
+
+const getTools = async (env) => {
 	const { results } = await env.DB.prepare(
 		"SELECT t1.CategoryName, t2.SubcategoryName, t3.* " +
 		"FROM ToolCategorys t1 " +
@@ -12,19 +22,16 @@ export const handleHomepageRequest = async (env) => {
 		"WHERE t2.SubcategoryId = 'a'",
 	)
 		.all();
+	return results;
+}
 
-	return Response.json(results);
-
-	// const recommendations = await getToolRecommendations(env);
-	//
-	// const result = {
-	// 	tools,
-	// 	recommendations
-	// }
-	//
-	// return new Response(JSON.stringify(result), {
-	// 	headers: {
-	// 		'Content-Type': 'application/json'
-	// 	},
-	// });
+const getToolRecommendations = async (env) => {
+	const { results } = await env.DB.prepare(
+		"SELECT ToolId " +
+		"FROM ToolRecommendations " +
+		"ORDER BY CreateTime DESC " +
+		"LIMIT 3",
+	)
+		.all();
+	return results;
 }
