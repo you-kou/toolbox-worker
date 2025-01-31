@@ -13,7 +13,7 @@ export default {
 		 * 工具主分类接口
 		 */
 		if (pathname === "/homepage") {
-			return await handleHomepageRequest(request, env);
+			return await handleHomepageRequest(env);
 		}
 
 		/**
