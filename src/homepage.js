@@ -1,7 +1,7 @@
 import { getToolRecommendations } from './tool-recommendation';
 
 export const handleHomepageRequest = async (env) => {
-	const tools = await env.DB.prepare(
+	const { results } = await env.DB.prepare(
 		"SELECT t1.CategoryName, t2.SubcategoryName, t3.* " +
 		"FROM ToolCategorys t1 " +
 		"JOIN ToolSubcategorys t2 " +
@@ -11,9 +11,9 @@ export const handleHomepageRequest = async (env) => {
 		"AND t2.SubcategoryId = t3.SubcategoryId " +
 		"WHERE t2.SubcategoryId = 'a'",
 	)
-		.run().results;
+		.all();
 
-	return Response.json(tools);
+	return Response.json(results);
 
 	// const recommendations = await getToolRecommendations(env);
 	//
