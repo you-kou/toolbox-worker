@@ -2,7 +2,7 @@
  * toolbox worker
  */
 
-import handleToolCategorysRequest from './tool-category';
+import { handleHomepageRequest } from './homepage';
 import { handleToolOverviewsRequest } from './tool-overview';
 
 export default {
@@ -13,7 +13,7 @@ export default {
 		 * 工具主分类接口
 		 */
 		if (pathname === "/homepage") {
-			return await handleToolCategorysRequest(request, env);
+			return await handleHomepageRequest(request, env);
 		}
 
 		/**

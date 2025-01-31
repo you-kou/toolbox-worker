@@ -1,6 +1,6 @@
 import { getToolRecommendations } from './tool-recommendation';
 
-export default async (env) => {
+export const handleHomepageRequest = async (env) => {
 	if (method === "GET") {
 		const tools = await env.DB.prepare(
 			"SELECT t1.CategoryName, t2.SubcategoryName, t3.* " +
